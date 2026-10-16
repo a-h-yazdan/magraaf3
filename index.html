@@ -1,0 +1,263 @@
+<!DOCTYPE html>
+<html lang="fa" dir="rtl">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>مآگراف | MĀGRAPH — نمونه اولیه</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Vazirmatn:wght@400;500;700;800&display=swap" rel="stylesheet">
+<style>
+:root{--bg:#F7F5EF;--tx:#181C19;--mu:#5d655f;--cd:#fff;--ln:#e2ddd0;--gr:#073D2E;--on:#F7F5EF;--cu:#D9A477;--ac:#073D2E;--sf:#ece8dc;--ok:#1d6b4b;--er:#a63d2f;box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}
+@media(prefers-color-scheme:dark){:root:not([data-theme=light]){--bg:#101411;--tx:#F1EFE8;--mu:#a2aaa4;--cd:#181C19;--ln:#303630;--gr:#0d5a43;--on:#F7F5EF;--ac:#D9A477;--sf:#1d231f;--ok:#58c79a;--er:#e88a7c}}
+:root[data-theme=dark]{--bg:#101411;--tx:#F1EFE8;--mu:#a2aaa4;--cd:#181C19;--ln:#303630;--gr:#0d5a43;--on:#F7F5EF;--ac:#D9A477;--sf:#1d231f;--ok:#58c79a;--er:#e88a7c}
+*,*::before,*::after{box-sizing:border-box}html,body{margin:0}
+body{background:var(--bg);color:var(--tx);font:400 16px/1.8 Vazirmatn,Tahoma,sans-serif;overflow-x:hidden}
+a{color:inherit;text-decoration:none}h1,h2,h3{line-height:1.4;margin:0 0 .5em}
+button,input,select,textarea{font:inherit;color:inherit}
+:focus-visible{outline:2px solid var(--cu);outline-offset:2px}
+.w{max-width:1120px;margin:auto;padding:0 18px}
+header{position:sticky;top:0;z-index:5;background:var(--bg);border-bottom:1px solid var(--ln);padding-top:env(safe-area-inset-top,0px)}
+.hb{display:flex;align-items:center;gap:12px;min-height:60px;flex-wrap:wrap}
+.logo{display:flex;align-items:center;gap:9px;font-weight:800;font-size:20px;color:var(--ac)}
+.logo small{font:500 11px sans-serif;letter-spacing:.18em;color:var(--mu);direction:ltr}
+nav{display:flex;gap:2px;flex-wrap:wrap;margin-inline-start:auto}
+nav a{padding:6px 11px;border-radius:6px;font-size:15px;color:var(--mu)}nav a:hover,nav a.on{background:var(--sf);color:var(--tx)}
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:6px;min-height:44px;padding:0 20px;border-radius:6px;border:1px solid var(--gr);background:var(--gr);color:var(--on);cursor:pointer;font-weight:500}
+.btn:hover{filter:brightness(1.15)}.btn.o{background:none;color:var(--tx);border-color:var(--ln)}.btn.s{min-height:36px;padding:0 13px;font-size:14px}.btn.r{background:var(--er);border-color:var(--er);color:#fff}
+.ic{min-width:44px;padding:0}
+.hero{background:var(--gr);color:var(--on);padding:64px 0 56px;position:relative;overflow:hidden}
+.hero .d{position:absolute;inset-inline-start:-90px;top:-70px;width:420px;height:420px;border:1px solid rgba(217,164,119,.5);transform:rotate(45deg)}
+.hero .d+.d{inset-inline-start:-30px;top:-10px;width:300px;height:300px}
+.hero h1{font-size:clamp(30px,5.5vw,54px);font-weight:800;max-width:14em;position:relative}
+.hero p{max-width:34em;opacity:.85;position:relative}
+.sb{display:flex;gap:8px;flex-wrap:wrap;margin:22px 0 0;position:relative}
+.sb input{flex:1;min-width:200px;min-height:48px;border-radius:6px;border:0;padding:0 14px;background:var(--on);color:#181C19}
+.hero .btn{background:var(--cu);border-color:var(--cu);color:#181C19}.hero .btn.o{background:none;color:var(--on);border-color:rgba(247,245,239,.5)}
+section{padding:38px 0}h2{font-size:24px;font-weight:700}
+.g{display:grid;gap:14px;grid-template-columns:repeat(auto-fill,minmax(250px,1fr))}
+.c{background:var(--cd);border:1px solid var(--ln);border-radius:8px;padding:16px}
+.c.h:hover{border-color:var(--ac)}
+.av{width:48px;height:48px;border-radius:50%;background:var(--gr);color:var(--on);display:grid;place-items:center;font-weight:700;flex:none}
+.row{display:flex;gap:12px;align-items:center}.sp{justify-content:space-between}.wr{flex-wrap:wrap}
+.tg{display:inline-block;font-size:12px;padding:1px 9px;border-radius:99px;background:var(--sf);color:var(--mu);margin:2px 0 2px 4px}
+.tg.v{background:var(--ok);color:#fff}.tg.p{background:var(--cu);color:#181C19}
+.mu{color:var(--mu);font-size:14px}.ltr{direction:ltr;unicode-bidi:embed}
+.bar{height:8px;background:var(--sf);border-radius:9px;overflow:hidden}.bar i{display:block;height:100%;background:var(--cu)}
+.lay{display:grid;gap:18px;grid-template-columns:240px 1fr}
+@media(max-width:760px){.lay{grid-template-columns:1fr}.hero{padding:44px 0}}
+label{display:block;font-size:14px;margin:10px 0 3px;color:var(--mu)}
+input,select,textarea{width:100%;min-height:44px;padding:8px 12px;border-radius:6px;border:1px solid var(--ln);background:var(--cd)}
+textarea{min-height:90px}input[type=checkbox]{width:auto;min-height:0}
+.er{color:var(--er);font-size:13px;margin-top:3px}
+table{width:100%;border-collapse:collapse}td,th{padding:8px;border-bottom:1px solid var(--ln);text-align:start;font-size:14px;vertical-align:top}
+.ov{overflow-x:auto}
+.bub{max-width:80%;padding:8px 13px;border-radius:10px;background:var(--sf);margin:6px 0}.bub.me{background:var(--gr);color:var(--on);margin-inline-start:auto}
+.tt{position:fixed;inset-inline:0;bottom:calc(20px + env(safe-area-inset-bottom,0px));display:flex;justify-content:center;z-index:9;pointer-events:none}
+.tt span{background:var(--tx);color:var(--bg);padding:8px 18px;border-radius:6px}
+.demo{background:var(--cu);color:#181C19;text-align:center;font-size:13px;padding:3px 10px}
+footer{border-top:1px solid var(--ln);padding:28px 0;margin-top:30px}
+.dot{background:var(--cu);color:#181C19;border-radius:99px;font-size:11px;padding:0 6px;margin-inline-start:3px}
+@media(prefers-reduced-motion:no-preference){.hero h1{animation:u .7s both}@keyframes u{from{opacity:0;transform:translateY(14px)}}}
+</style>
+</head>
+<body>
+<div class="demo">نسخه نمایشی: داده‌ها نمونه‌اند، پیامک و پیام‌رسانی بلادرنگ شبیه‌سازی شده‌اند.</div>
+<header><div class="w hb">
+<a class="logo" href="#/" aria-label="مآگراف"><svg width="34" height="41" viewBox="204 728 188 226" fill="none" stroke="currentColor" stroke-width="7" stroke-linejoin="miter" aria-hidden="true"><polygon points="298,740 311,753 298,766 285,753"/><polygon points="298,776 385,862 298,948 212,862"/><polygon points="298,812 346,862 298,909 250,862"/><g fill="currentColor" stroke="none"><circle cx="298" cy="812" r="9"/><circle cx="346" cy="862" r="9"/><circle cx="298" cy="909" r="9"/><circle cx="250" cy="862" r="9"/></g></svg>مآگراف <small>MĀGRAPH</small></a>
+<nav id="nav"></nav>
+<button class="btn o s ic" id="th" aria-label="تغییر تم">◐</button>
+<span id="au"></span>
+</div></header>
+<main id="app" class="w"></main>
+<footer><div class="w row sp wr mu"><span>مآگراف | MĀGRAPH — بازارگاه عوامل هنری و سینمایی. نشان از روی تصویر لوگوی مرجع به‌صورت وکتور بازسازی شده است.</span><span><a href="#/terms">قوانین و حریم خصوصی</a></span></div></footer>
+<div class="tt" id="tt"></div>
+<script>
+const $=s=>document.querySelector(s),fa=n=>Number(n).toLocaleString('fa-IR'),tm=n=>fa(n)+' تومان';
+const CATS=[
+["کارگردانی و مدیریت تولید","کارگردان","دستیار کارگردان","برنامه‌ریز","منشی صحنه","مدیر تولید","تهیه‌کننده"],
+["بازیگری و اجرا","بازیگر زن","بازیگر مرد","بازیگر کودک و نوجوان","بدلکار","گوینده","صداپیشه"],
+["تصویربرداری و عکاسی","مدیر فیلم‌برداری","فیلم‌بردار","فوکوس پولر","عکاس تبلیغاتی","تصویربردار هوایی"],
+["نور و تجهیزات","طراح نور","گافر","اجاره دوربین","اجاره لنز","تجهیزات نورپردازی"],
+["طراحی هنری و ظاهر","طراح صحنه","طراح لباس","طراح گریم","گریمور"],
+["صدا و موسیقی","صدابردار","طراح صدا","آهنگ‌ساز","نوازنده"],
+["نویسندگی و پس‌تولید","فیلمنامه‌نویس","تدوینگر","اصلاح‌گر رنگ","موشن‌گرافیست","متخصص جلوه‌های بصری"],
+["لوکیشن و خدمات تولید","تأمین‌کننده لوکیشن","اجاره استودیو","حمل‌ونقل","پذیرایی"],
+["سرمایه و پشتیبانی تجاری","سرمایه‌گذار","شریک مالی","شرکت خدمات تولید"]];
+const EXTRA={1:["جنسیت نقش",["زن","مرد"]],2:["تجهیزات",["Arri Alexa","Sony FX6","RED"]],3:["نوع خدمات",["اجاره","پروژه‌ای"]],5:["تجهیزات",["Zoom F6","Sound Devices","Sennheiser"]],6:["نرم‌افزار",["DaVinci","Premiere","After Effects"]],7:["نوع فضا",["خانه","استودیو","فضای باز"]]};
+const COOP=["پروژه‌ای","روزمزد","ساعتی","مشارکت در سود","توافقی","قراردادی","دانشجویی"];
+const CITY=["تهران","شیراز","اصفهان","مشهد","تبریز","رشت"];
+const PT=["فیلم سینمایی","فیلم کوتاه","سریال","مستند","تئاتر","موزیک‌ویدئو","تیزر تبلیغاتی","محتوای شبکه‌های اجتماعی"];
+// [id,name,cat,subIdx,city,exp,coop,fee/day,rate,verified,avail,extra,bio]
+const P=[[1,"نیلوفر کاظمی",1,1,0,8,0,6e6,4.8,1,1,"زن","بازیگر سینما و تئاتر با تمرکز بر نقش‌های درام اجتماعی."],
+[2,"آرمان صدری",2,1,0,10,1,9e6,4.9,1,1,"Arri Alexa","فیلم‌بردار فیلم‌های بلند، علاقه‌مند به نور طبیعی."],
+[3,"سارا نوری",0,2,0,6,0,5e6,4.5,1,0,"","دستیار کارگردان در سریال و تیزر، مسلط بر برنامه‌ریزی روزانه."],
+[4,"کیان مرادی",5,0,1,7,1,4e6,4.6,0,1,"Zoom F6","صدابردار صحنه با سابقه فیلم کوتاه و مستند."],
+[5,"مهسا رحیمی",4,2,2,9,0,7e6,4.7,1,1,"","طراح لباس فیلم‌های تاریخی و تئاتر."],
+[6,"پارسا فلاحی",6,1,0,5,0,3e6,4.3,0,1,"DaVinci","تدوینگر و اصلاح‌گر رنگ؛ تحویل سریع برای تیزر."],
+[7,"داریوش اکبری",3,2,0,12,0,12e6,4.8,1,1,"اجاره","اجاره‌دهنده دوربین و لنز سینمایی با ضمانت‌نامه."],
+[8,"الهام یزدانی",1,4,3,4,4,2e6,4.2,0,1,"زن","صداپیشه و گوینده تبلیغات رادیویی."],
+[9,"رضا بهروزی",0,0,1,15,2,15e6,4.9,1,0,"","کارگردان فیلم‌های کوتاه و مستند جشنواره‌ای."],
+[10,"ترانه ملکی",5,2,0,11,0,8e6,4.7,1,1,"Sound Devices","آهنگ‌ساز موسیقی فیلم و موزیک‌ویدئو."],
+[11,"بهنام صالحی",7,1,4,6,2,0,4.4,0,1,"استودیو","اجاره استودیو و سالن تمرین در رشت."],
+[12,"مریم سلطانی",4,3,0,8,1,3.5e6,4.6,1,1,"","گریمور چهره‌پرداز؛ گریم افکت و دوره‌ای."],
+[13,"سینا قاسمی",2,4,1,3,0,2.5e6,4.1,0,1,"Sony FX6","تصویربردار هوایی با گواهی پرواز پهپاد."],
+[14,"نگار حیدری",6,3,5,4,0,3e6,4.4,0,1,"After Effects","موشن‌گرافیست و طراح تیتراژ."],
+[15,"کامران ایزدی",8,0,2,14,4,0,4.5,1,1,"","شرکت خدمات تولید و تأمین بودجه برای پروژه‌های تبلیغاتی."]];
+const PR=[[1,"فیلم کوتاه «پل»",1,0,[[2,"فیلم‌بردار",1],[3,"صدابردار",1],[0,"بازیگر زن",1]],"پروژه‌ای",3e6,"فیلم کوتاه درام ۱۰ روزه با تمرکز بر لوکیشن‌های شهری."],
+[2,"تیزر پوشاک بهاره",6,0,[[2,"فیلم‌بردار",1],[4,"گریمور",1],[6,"تدوینگر",1]],"روزمزد",5e6,"تیزر ۶۰ ثانیه‌ای، سه روز فیلم‌برداری."],
+[3,"مستند «رنگ»",3,2,[[2,"فیلم‌بردار",1],[5,"آهنگ‌ساز",1]],"توافقی",0,"مستند درباره صنایع دستی اصفهان."],
+[4,"موزیک‌ویدئو «شب»",5,0,[[2,"تصویربردار هوایی",1],[3,"طراح نور",1]],"پروژه‌ای",8e6,"ویدئوی یک تک‌آهنگ با نورپردازی شبانه."],
+[5,"تئاتر «ایوان»",4,3,[[4,"طراح لباس",1],[1,"بازیگر مرد",2]],"قراردادی",4e6,"نمایش ۲۰ شب اجرا در سالن شهر."],
+[6,"سریال «کوچه»",2,0,[[0,"دستیار کارگردان",1],[7,"حمل‌ونقل",1]],"قراردادی",7e6,"سریال ۱۲ قسمتی؛ فاز پیش‌تولید."],
+[7,"محتوای شبکه اجتماعی برند",7,0,[[6,"موشن‌گرافیست",1],[1,"گوینده",1]],"ساعتی",6e5,"مجموعه ریلز ماهانه برای یک برند."],
+[8,"فیلم کوتاه «آینه»",1,5,[[4,"گریمور",1],[2,"فوکوس پولر",1]],"دانشجویی",0,"فیلم دانشجویی، مناسب برای کسب سابقه."]];
+const DEF={user:null,fav:[],cmp:[],pr:[],props:[{id:1,pid:1,by:"آرمان صدری",role:"فیلم‌بردار",fee:9e6,msg:"آماده همکاری از اول ماه.",st:"ارسال‌شده"},{id:2,pid:1,by:"کیان مرادی",role:"صدابردار",fee:4e6,msg:"تجهیزات کامل دارم.",st:"مشاهده‌شده"}],
+chats:[{w:"آرمان صدری",pj:"فیلم کوتاه «پل»",m:[["o","سلام، درباره زمان فیلم‌برداری صحبت کنیم؟"]],unread:1},{w:"داریوش اکبری",pj:"تیزر پوشاک بهاره",m:[["o","لنزها برای تاریخ موردنظر آزاد است."]],unread:1}],
+nt:[{t:"پیشنهاد همکاری جدید برای «پل»",r:0},{t:"پروفایل شما ۶۰٪ تکمیل شده است",r:0},{t:"پیام جدید از داریوش اکبری",r:0}],
+prof:{name:"",bio:"",spec:"",hist:"",skills:"",port:"",coop:"",fee:"",city:"",photo:0},reports:[{t:"نظر نامناسب روی پروفایل نمونه",st:"باز"}],theme:""};
+let S;try{S=Object.assign({},DEF,JSON.parse(localStorage.getItem('mg')||'{}'))}catch(e){S=structuredClone(DEF)}
+const save=()=>{try{localStorage.setItem('mg',JSON.stringify(S))}catch(e){}};
+const toast=m=>{$('#tt').innerHTML='<span role="status">'+m+'</span>';setTimeout(()=>$('#tt').innerHTML='',2400)};
+const esc=s=>String(s).replace(/[&<>"]/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;'}[c]));
+const can=()=>!!S.user;
+const fee=p=>can()?(p[7]?tm(p[7])+' / روز':'توافقی'):'<span class="mu">برای دیدن دستمزد وارد شوید</span>';
+const ini=n=>esc(n.trim()[0]||'؟');
+function theme(){const t=S.theme;if(t)document.documentElement.dataset.theme=t;else delete document.documentElement.dataset.theme}
+$('#th').onclick=()=>{const d=document.documentElement.dataset.theme||(matchMedia('(prefers-color-scheme:dark)').matches?'dark':'light');S.theme=d=='dark'?'light':'dark';theme();save()};
+function head(){const u=S.user,un=S.nt.filter(n=>!n.r).length,uc=S.chats.filter(c=>c.unread).length;
+const l=[['/','خانه'],['/cats','دسته‌ها'],['/search','متخصصان'],['/projects','پروژه‌ها']];
+if(u)l.push(['/messages','پیام‌ها'+(uc?`<b class=dot>${fa(uc)}</b>`:'')],['/notifs','اعلان‌ها'+(un?`<b class=dot>${fa(un)}</b>`:'')],['/favs','علاقه‌مندی‌ها'],['/dash','داشبورد']);
+if(u&&u.admin)l.push(['/admin','مدیریت']);
+const cur='/'+(location.hash.slice(2).split('?')[0].split('/')[0]);
+$('#nav').innerHTML=l.map(x=>`<a href="#${x[0]}" class="${cur==x[0]?'on':''}">${x[1]}</a>`).join('');
+$('#au').innerHTML=u?`<a class="btn s" href="#/profile">${esc(u.name||'پروفایل من')}</a> <button class="btn o s" id="lo">خروج</button>`:`<a class="btn s" href="#/login">ورود / ثبت‌نام</a>`;
+if($('#lo'))$('#lo').onclick=()=>{S.user=null;save();location.hash='#/'}}
+function card(p){const f=S.fav.includes(p[0]);return `<article class="c h"><div class="row"><div class="av">${ini(p[1])}</div><div><a href="#/pro/${p[0]}"><b>${p[1]}</b></a><div class="mu">${CATS[p[2]][p[3]+1]} · ${CITY[p[4]]}</div></div></div>
+<p class="mu" style="margin:10px 0">${p[12]}</p><div>${p[9]?'<span class="tg v">هویت تأییدشده</span>':'<span class="tg">هویت تأییدنشده</span>'}<span class="tg">${COOP[p[6]]}</span><span class="tg">★ ${fa(p[8])}</span>${p[10]?'<span class="tg p">آزاد برای پروژه</span>':''}</div>
+<div class="row sp" style="margin-top:10px"><span>${fee(p)}</span><button class="btn o s" data-fav="${p[0]}" aria-pressed="${f}">${f?'♥ ذخیره‌شده':'♡ ذخیره'}</button></div></article>`}
+function pcard(j){return `<article class="c h"><a href="#/project/${j[0]}"><b>${j[1]}</b></a><div class="mu">${PT[j[2]]} · ${CITY[j[3]]}</div><p class="mu">${j[7]}</p><div>${j[4].map(r=>`<span class="tg">${r[1]}${r[2]>1?' ×'+fa(r[2]):''}</span>`).join('')}</div><div class="mu">${COOP.indexOf(j[5])>-1?j[5]:j[5]} · ${can()?(j[6]?tm(j[6]):'توافقی'):'دستمزد: پس از ورود'}</div></article>`}
+function allPr(){return S.pr.concat(PR)}
+// ---- pages
+const R={};
+R['/']=()=>`<div class="hero" style="margin:0 -18px;padding-inline:18px"><i class="d"></i><i class="d"></i><div class="w"><h1>از ایده تا صحنه، عوامل درست را پیدا کن.</h1><p>مآگراف، نقطه اتصال پروژه‌های هنری به استعدادها و متخصصانی است که آن‌ها را به واقعیت تبدیل می‌کنند.</p>
+<form class="sb" id="qs"><input id="q" placeholder="مثلاً فیلم‌بردار تهران" aria-label="جست‌وجو"><button class="btn">جست‌وجو</button></form>
+<div class="sb"><a class="btn" href="#/search">دنبال عوامل پروژه‌ام</a><a class="btn o" href="#/projects">می‌خواهم پروژه بگیرم</a></div></div></div>
+<section><h2>دسته‌بندی‌ها</h2><div class="g">${CATS.map((c,i)=>`<a class="c h" href="#/search?cat=${i}"><b>${c[0]}</b><div class="mu">${c.slice(1,4).join('، ')} و …</div></a>`).join('')}</div></section>
+<section><h2>متخصصان منتخب</h2><div class="g">${P.filter(p=>p[9]&&p[8]>=4.7).slice(0,6).map(card).join('')}</div></section>
+<section><h2>پروژه‌های تازه</h2><div class="g">${allPr().slice(0,4).map(pcard).join('')}</div></section>
+<section><h2>مآگراف چطور کار می‌کند</h2><ol class="g" style="padding:0;list-style:none"><li class="c"><b>۱. ثبت پروژه</b><div class="mu">نوع اثر و نقش‌های موردنیاز را مشخص کنید.</div></li><li class="c"><b>۲. دریافت پیشنهاد</b><div class="mu">متخصصان مرتبط نمونه‌کار و دستمزد پیشنهادی می‌فرستند.</div></li><li class="c"><b>۳. گفت‌وگو و همکاری</b><div class="mu">پیشنهاد را بپذیرید و کار را شروع کنید.</div></li></ol></section>
+<section class="c row sp wr"><div><h2 style="margin:0">پروفایل حرفه‌ای‌ات را بساز</h2><span class="mu">یک حساب، هر دو نقش: سفارش‌دهنده و متخصص.</span></div><a class="btn" href="#/profile">تکمیل پروفایل</a></section>`;
+R['/cats']=()=>`<h2 style="margin-top:28px">دسته‌بندی تخصص‌ها</h2><div class="g">${CATS.map((c,i)=>`<div class="c"><a href="#/search?cat=${i}"><b>${c[0]}</b></a><div style="margin-top:8px">${c.slice(1).map((s,j)=>`<a class="tg" href="#/search?cat=${i}&sub=${j}">${s}</a>`).join('')}</div></div>`).join('')}</div>`;
+R['/search']=q=>{const g=k=>q.get(k)||'';const cat=g('cat'),x=EXTRA[cat];
+return `<div class="lay" style="margin-top:24px"><form class="c" id="flt" style="align-self:start"><b>فیلتر</b>
+<label>عبارت</label><input name="t" value="${esc(g('t'))}"><label>دسته</label><select name="cat"><option value="">همه</option>${CATS.map((c,i)=>`<option value="${i}" ${cat==i&&cat!==''?'selected':''}>${c[0]}</option>`).join('')}</select>
+<label>شهر</label><select name="city"><option value="">همه</option>${CITY.map((c,i)=>`<option value="${i}" ${g('city')==i&&g('city')!==''?'selected':''}>${c}</option>`).join('')}</select>
+<label>نوع همکاری</label><select name="coop"><option value="">همه</option>${COOP.map((c,i)=>`<option value="${i}" ${g('coop')==i&&g('coop')!==''?'selected':''}>${c}</option>`).join('')}</select>
+<label>سقف دستمزد روزانه (میلیون تومان)</label><input name="fee" type="number" min="0" value="${esc(g('fee'))}">
+<label>حداقل امتیاز</label><select name="rate"><option value="">همه</option>${[4,4.5,4.8].map(r=>`<option ${g('rate')==r?'selected':''} value="${r}">${fa(r)} به بالا</option>`).join('')}</select>
+<label>حداقل سابقه (سال)</label><input name="exp" type="number" min="0" value="${esc(g('exp'))}">
+${x?`<label>${x[0]}</label><select name="x"><option value="">همه</option>${x[1].map(o=>`<option ${g('x')==o?'selected':''}>${o}</option>`).join('')}</select>`:''}
+<label><input type="checkbox" name="ver" ${g('ver')?'checked':''}> فقط هویت تأییدشده</label><label><input type="checkbox" name="av" ${g('av')?'checked':''}> فقط آزاد برای پروژه</label>
+<button class="btn" style="width:100%;margin-top:10px">اعمال</button></form>
+<div id="res"></div></div>`};
+function runSearch(q){const g=k=>q.get(k)||'';let r=P.filter(p=>{const t=g('t');
+if(t&&!(p[1]+CATS[p[2]][p[3]+1]+CATS[p[2]][0]+CITY[p[4]]+p[12]).includes(t.trim()))return 0;
+if(g('cat')!==''&&p[2]!=g('cat'))return 0;if(g('sub')!==''&&p[3]!=g('sub'))return 0;if(g('city')!==''&&p[4]!=g('city'))return 0;if(g('coop')!==''&&p[6]!=g('coop'))return 0;
+if(g('fee')&&(!can()||(p[7]&&p[7]>g('fee')*1e6)))return 0;if(g('rate')&&p[8]<g('rate'))return 0;if(g('exp')&&p[5]<g('exp'))return 0;if(g('x')&&p[11]!=g('x'))return 0;if(g('ver')&&!p[9])return 0;if(g('av')&&!p[10])return 0;return 1});
+$('#res').innerHTML=`<div class="row sp mu" style="margin-bottom:8px"><span>${fa(r.length)} متخصص یافت شد</span>${S.cmp.length?'<a class="btn s" href="#/favs">مقایسه ('+fa(S.cmp.length)+')</a>':''}</div>`+(r.length?`<div class="g">${r.map(card).join('')}</div>`:'<div class="c">نتیجه‌ای پیدا نشد. فیلترها را کم کنید یا دسته را عوض کنید.</div>')+(g('fee')&&!can()?'<p class="mu">فیلتر دستمزد فقط برای کاربران واردشده کار می‌کند.</p>':'')}
+R['/pro/']=id=>{const p=P.find(x=>x[0]==id);if(!p)return R['/404']();const f=S.fav.includes(p[0]);
+return `<div class="c" style="margin-top:24px"><div class="row wr"><div class="av" style="width:72px;height:72px;font-size:28px">${ini(p[1])}</div><div><h1 style="margin:0;font-size:26px">${p[1]}</h1><div class="mu">${CATS[p[2]][p[3]+1]} · ${CITY[p[4]]} · ${fa(p[5])} سال سابقه</div></div></div>
+<p>${p[12]}</p><div><span class="tg ${p[9]?'v':''}">${p[9]?'هویت تأییدشده':'هویت تأییدنشده'}</span><span class="tg">★ ${fa(p[8])} (نظرات نمونه)</span><span class="tg">${COOP[p[6]]}</span>${p[11]?`<span class="tg">${p[11]}</span>`:''}</div>
+<p><b>دستمزد:</b> ${fee(p)}</p><div class="row wr"><button class="btn" data-msg="${p[0]}">ارسال پیام</button><button class="btn o" data-fav="${p[0]}">${f?'♥ ذخیره‌شده':'♡ ذخیره'}</button><button class="btn o" data-cmp="${p[0]}">افزودن به مقایسه</button></div></div>
+<section><h2>نمونه‌کار (نمونه)</h2><div class="g"><div class="c"><b>فیلم کوتاه «نمونه ۱»</b><div class="mu">نقش: ${CATS[p[2]][p[3]+1]} · ۱۴۰۳</div></div><div class="c"><b>تیزر «نمونه ۲»</b><div class="mu">نقش: ${CATS[p[2]][p[3]+1]} · ۱۴۰۲</div></div></div></section>`};
+R['/projects']=()=>`<div class="row sp wr" style="margin-top:24px"><h2 style="margin:0">پروژه‌ها</h2><a class="btn" href="#/new">ثبت پروژه</a></div><div class="g" style="margin-top:14px">${allPr().filter(j=>j[8]!=='draft').map(pcard).join('')}</div>`;
+R['/project/']=id=>{const j=allPr().find(x=>x[0]==id);if(!j)return R['/404']();const mine=S.props.filter(x=>x.pid==id);
+return `<div class="c" style="margin-top:24px"><h1 style="font-size:26px">${j[1]}</h1><div class="mu">${PT[j[2]]} · ${CITY[j[3]]} · منتشرشده</div><p>${j[7]}</p><div>${j[4].map(r=>`<span class="tg">${r[1]} ×${fa(r[2])}</span>`).join('')}</div><p>${j[5]} · ${can()?(j[6]?tm(j[6]):'توافقی'):'دستمزد برای مهمان پنهان است'}</p><button class="btn" id="sp" data-id="${id}">ارسال پیشنهاد همکاری</button></div>
+<section><h2>پیشنهادهای دریافتی</h2>${can()?(mine.length?mine.map(propRow).join(''):'<div class="c">هنوز پیشنهادی نیست.</div>'):'<div class="c">برای دیدن پیشنهادها <a href="#/login"><u>وارد شوید</u></a>.</div>'}</section><div id="pf"></div>`};
+function propRow(x){const o=allPr().find(j=>j[0]==x.pid);return `<div class="c" style="margin-bottom:8px"><div class="row sp wr"><div><b>${esc(x.by)}</b> — ${esc(x.role)}<div class="mu">${o?o[1]:''} · ${tm(x.fee)} · ${esc(x.msg)}</div></div><div class="row"><span class="tg p">${x.st}</span>${x.mine?`<button class="btn o s" data-pw="${x.id}">پس‌گرفتن</button>`:`<select data-ps="${x.id}" aria-label="وضعیت">${['مشاهده‌شده','در حال مذاکره','پذیرفته‌شده','ردشده'].map(s=>`<option ${s==x.st?'selected':''}>${s}</option>`).join('')}</select>`}</div></div></div>`}
+R['/new']=()=>{if(!can())return gate();const d=NEWP;
+const sT=['اطلاعات پایه','عوامل موردنیاز','شرایط همکاری','بررسی و انتشار'];
+let b='';if(d.s==0)b=`<label for="a1">عنوان پروژه</label><input id="a1" value="${esc(d.t)}"><div class="er" id="e1"></div><label>نوع اثر</label><select id="a2">${PT.map((x,i)=>`<option value="${i}" ${d.ty==i?'selected':''}>${x}</option>`).join('')}</select><label>شهر</label><select id="a3">${CITY.map((x,i)=>`<option value="${i}" ${d.c==i?'selected':''}>${x}</option>`).join('')}</select><label>توضیحات</label><textarea id="a4">${esc(d.ds)}</textarea>`;
+if(d.s==1)b=`<label>انتخاب تخصص‌ها (چندتایی)</label>${CATS.map((c,i)=>`<details ${d.r.some(r=>r[0]==i)?'open':''}><summary>${c[0]}</summary>${c.slice(1).map((s,j)=>`<label style="display:flex;gap:8px;align-items:center;margin:2px 0"><input type="checkbox" data-r="${i}|${s}" ${d.r.some(r=>r[1]==s)?'checked':''}> ${s}</label>`).join('')}</details>`).join('')}<div class="er" id="e1"></div>`;
+if(d.s==2)b=`<label>نوع همکاری</label><select id="a5">${COOP.map(x=>`<option ${d.co==x?'selected':''}>${x}</option>`).join('')}</select><label>بودجه دستمزد (تومان، ۰ = توافقی)</label><input id="a6" type="number" min="0" value="${d.f}"><div class="er" id="e1"></div><label>مدت همکاری</label><input id="a7" value="${esc(d.du)}">`;
+if(d.s==3)b=`<table><tr><td>عنوان</td><td>${esc(d.t)}</td></tr><tr><td>نوع</td><td>${PT[d.ty]}</td></tr><tr><td>شهر</td><td>${CITY[d.c]}</td></tr><tr><td>نقش‌ها</td><td>${d.r.map(r=>r[1]).join('، ')}</td></tr><tr><td>همکاری</td><td>${d.co} · ${d.f?tm(d.f):'توافقی'}</td></tr></table>`;
+return `<div class="c" style="margin-top:24px;max-width:640px"><h2>ثبت پروژه — مرحله ${fa(d.s+1)} از ۴: ${sT[d.s]}</h2><div class="bar"><i style="width:${(d.s+1)*25}%"></i></div>${b}<div class="row" style="margin-top:16px">${d.s?'<button class="btn o" id="pv">قبلی</button>':''}${d.s<3?'<button class="btn" id="nx">بعدی</button>':'<button class="btn o" id="dr">ذخیره پیش‌نویس</button><button class="btn" id="pb">انتشار آزمایشی</button>'}</div></div>`};
+let NEWP={s:0,t:"",ty:0,c:0,ds:"",r:[],co:"پروژه‌ای",f:0,du:""};
+function gate(){return `<div class="c" style="margin-top:24px"><h2>ورود لازم است</h2><p>این بخش فقط برای کاربران واردشده در دسترس است.</p><a class="btn" href="#/login">ورود / ثبت‌نام</a></div>`}
+R['/login']=()=>{const L=LG;return `<div class="c" style="margin:24px auto;max-width:420px"><h2>ورود و ثبت‌نام</h2><p class="mu">ورود پیامکی شبیه‌سازی شده است؛ پیامک واقعی ارسال نمی‌شود و اطلاعات حساس واقعی وارد نکنید.</p>
+${L.s==0?`<label for="ph">شماره موبایل</label><input id="ph" class="ltr" inputmode="numeric" placeholder="09123456789" value="${L.p}"><div class="er" id="e1"></div><button class="btn" id="l1" style="margin-top:12px">دریافت کد</button><p class="mu">برای ورود به پنل مدیریت آزمایشی، شماره ۰۹۰۰۰۰۰۰۰۰۰ را وارد کنید.</p>`:''}
+${L.s==1?`<p class="mu">کد آزمایشی: <b>۱۲۳۴۵</b></p><label for="cd">کد تأیید</label><input id="cd" class="ltr" inputmode="numeric"><div class="er" id="e1"></div><button class="btn" id="l2" style="margin-top:12px">تأیید</button>`:''}
+${L.s==2?`<label for="nm">نام نمایشی</label><input id="nm"><div class="er" id="e1"></div><label>نقش‌ها (می‌توانید هر دو را انتخاب کنید)</label><label style="display:flex;gap:8px"><input type="checkbox" id="r1" checked> سفارش‌دهنده پروژه</label><label style="display:flex;gap:8px"><input type="checkbox" id="r2"> متخصص / ارائه‌دهنده خدمات</label><button class="btn" id="l3" style="margin-top:12px">ورود به محیط آزمایشی</button>`:''}
+<hr style="border:0;border-top:1px solid var(--ln);margin:16px 0"><a href="#/" class="mu">ادامه به‌عنوان مهمان</a></div>`};
+let LG={s:0,p:""};
+const WT={name:[10,"نام نمایشی"],photo:[5,"تصویر پروفایل"],bio:[15,"معرفی حرفه‌ای"],spec:[15,"تخصص‌ها"],hist:[10,"سوابق"],skills:[10,"مهارت‌ها"],port:[15,"نمونه‌کار"],coop:[5,"شرایط همکاری"],fee:[10,"دستمزد"],city:[5,"شهر فعالیت"]};
+function comp(){let t=0;const miss=[];for(const k in WT){const v=S.prof[k];if(v&&v!=='0')t+=WT[k][0];else miss.push(k)}return [t,miss]}
+R['/profile']=()=>{if(!can())return gate();const p=S.prof,[pc,miss]=comp();
+const F=(k,l,ty)=>ty=='ta'?`<label for="p_${k}">${l}</label><textarea id="p_${k}">${esc(p[k]||'')}</textarea>`:ty=='sel'?`<label for="p_${k}">${l}</label><select id="p_${k}"><option value="">انتخاب کنید</option>${(k=='coop'?COOP:CITY).map(o=>`<option ${p[k]==o?'selected':''}>${o}</option>`).join('')}</select>`:`<label for="p_${k}">${l}</label><input id="p_${k}" ${ty=='n'?'type=number min=0':''} value="${esc(p[k]||'')}">`;
+return `<div class="lay" style="margin-top:24px"><div class="c" style="align-self:start"><b>تکمیل پروفایل: ${fa(pc)}٪</b><div class="bar" role="progressbar" aria-valuenow="${pc}" aria-valuemin="0" aria-valuemax="100"><i style="width:${pc}%"></i></div>
+<p class="mu">${miss.length?'موارد ناقص:':'همه موارد تکمیل است.'}</p>${miss.map(k=>`<div><a href="#/profile" data-go="p_${k}"><u>${WT[k][1]}</u></a> <span class="mu">(${fa(WT[k][0])}٪)</span></div>`).join('')}
+<hr style="border:0;border-top:1px solid var(--ln)"><span class="tg">تکمیل پروفایل</span><span class="tg">هویت تأییدنشده</span><span class="tg">سوابق تأییدنشده</span><button class="btn o s" id="vr" style="margin-top:8px">درخواست تأیید (شبیه‌سازی)</button></div>
+<form class="c" id="pf2"><h2>ویرایش پروفایل</h2>${F('name','نام نمایشی')}${F('bio','معرفی حرفه‌ای','ta')}${F('spec','تخصص‌ها (با ویرگول جدا کنید)')}${F('hist','سوابق کاری','ta')}${F('skills','مهارت‌ها')}${F('port','عنوان یک نمونه‌کار')}${F('coop','شرایط همکاری','sel')}${F('fee','دستمزد روزانه (تومان)','n')}${F('city','شهر فعالیت','sel')}<label style="display:flex;gap:8px"><input type="checkbox" id="p_photo" ${p.photo?'checked':''}> تصویر بارگذاری شد (نمایشی)</label><button class="btn" style="margin-top:14px">ذخیره</button></form></div>`};
+R['/dash']=()=>{if(!can())return gate();const [pc]=comp(),my=S.props.filter(x=>x.mine);
+return `<h2 style="margin-top:24px">داشبورد</h2><div class="g"><div class="c"><div class="mu">پروژه‌های من</div><b style="font-size:26px">${fa(S.pr.length)}</b><div><a href="#/new"><u>ثبت پروژه جدید</u></a></div></div><div class="c"><div class="mu">پیشنهادهای ارسالی</div><b style="font-size:26px">${fa(my.length)}</b><div><a href="#/proposals"><u>مشاهده</u></a></div></div><div class="c"><div class="mu">تکمیل پروفایل</div><b style="font-size:26px">${fa(pc)}٪</b><div><a href="#/profile"><u>ویرایش</u></a></div></div><div class="c"><div class="mu">علاقه‌مندی‌ها</div><b style="font-size:26px">${fa(S.fav.length)}</b></div></div>
+<section><h2>پروژه‌های من</h2>${S.pr.length?`<div class="g">${S.pr.map(pcard).join('')}</div>`:'<div class="c">هنوز پروژه‌ای ثبت نکرده‌اید. <a href="#/new"><u>اولین پروژه را ثبت کنید</u></a>.</div>'}</section>`};
+R['/proposals']=()=>{if(!can())return gate();return `<h2 style="margin-top:24px">پیشنهادهای همکاری</h2>${S.props.length?S.props.map(propRow).join(''):'<div class="c">پیشنهادی وجود ندارد.</div>'}`};
+R['/messages']=()=>{if(!can())return gate();const c=S.chats[CH]||S.chats[0];
+return `<h2 style="margin-top:24px">پیام‌ها</h2><p class="mu">گفت‌وگوها نمایشی‌اند و بلادرنگ نیستند.</p><div class="lay"><div class="c">${S.chats.map((x,i)=>`<a href="#/messages" data-ch="${i}" class="row sp" style="padding:8px 0"><span><b>${esc(x.w)}</b><div class="mu">${esc(x.m[x.m.length-1][1]).slice(0,30)}</div></span>${x.unread?'<b class="dot">۱</b>':''}</a>`).join('')}</div>
+<div class="c">${c?`<div class="row sp wr"><div><b>${esc(c.w)}</b><div class="mu">پروژه: ${esc(c.pj)}</div></div><div><button class="btn o s" data-rp="1">گزارش</button> <button class="btn o s" data-bl="1">مسدودکردن</button></div></div><div style="min-height:160px;margin:10px 0">${c.m.map(m=>`<div class="bub ${m[0]=='me'?'me':''}">${esc(m[1])}</div>`).join('')}</div><form id="mf" class="row"><input id="mt" aria-label="پیام" placeholder="پیام شما"><button class="btn">ارسال</button></form>`:'<p>گفت‌وگویی نیست.</p>'}</div></div>`};
+let CH=0;
+R['/favs']=()=>{if(!can())return gate();const f=P.filter(p=>S.fav.includes(p[0])),c=P.filter(p=>S.cmp.includes(p[0]));
+return `<h2 style="margin-top:24px">علاقه‌مندی‌ها</h2>${f.length?`<div class="g">${f.map(card).join('')}</div>`:'<div class="c">فهرست خالی است. در <a href="#/search"><u>جست‌وجو</u></a> متخصصان را ذخیره کنید.</div>'}
+<section><div class="row sp"><h2 style="margin:0">مقایسه</h2>${c.length?'<button class="btn o s" id="cc">پاک‌کردن</button>':''}</div>${c.length>1?`<div class="ov"><table><tr><th></th>${c.map(p=>`<th><a href="#/pro/${p[0]}">${p[1]}</a></th>`).join('')}</tr>${[['تخصص',p=>CATS[p[2]][p[3]+1]],['سابقه',p=>fa(p[5])+' سال'],['همکاری',p=>COOP[p[6]]],['دستمزد',p=>fee(p)],['امتیاز',p=>'★ '+fa(p[8])]].map(r=>`<tr><td>${r[0]}</td>${c.map(p=>`<td>${r[1](p)}</td>`).join('')}</tr>`).join('')}</table></div>`:'<div class="c">حداقل دو متخصص را از پروفایلشان به مقایسه اضافه کنید.</div>'}</section>`};
+R['/notifs']=()=>{if(!can())return gate();return `<div class="row sp" style="margin-top:24px"><h2 style="margin:0">اعلان‌ها</h2><button class="btn o s" id="ra">همه را خوانده‌شده کن</button></div>${S.nt.map((n,i)=>`<div class="c" style="margin:8px 0;${n.r?'opacity:.6':''}"><div class="row sp"><span>${n.r?'':'● '}${n.t}</span>${n.r?'':`<button class="btn o s" data-rd="${i}">خوانده شد</button>`}</div></div>`).join('')}<p class="mu">اعلان پیامکی شبیه‌سازی‌شده است.</p>`};
+R['/settings']=()=>R['/profile']();
+R['/admin']=()=>{if(!(S.user&&S.user.admin))return `<div class="c" style="margin-top:24px"><h2>دسترسی ندارید</h2><p>این بخش فقط برای مدیر است.</p></div>`;
+return `<h2 style="margin-top:24px">پنل مدیریت (آزمایشی)</h2><div class="g">${[['متخصصان نمونه',P.length],['پروژه‌ها',allPr().length],['پیشنهادها',S.props.length],['گزارش‌های باز',S.reports.filter(r=>r.st=='باز').length],['علاقه‌مندی‌ها',S.fav.length]].map(x=>`<div class="c"><div class="mu">${x[0]}</div><b style="font-size:26px">${fa(x[1])}</b></div>`).join('')}</div>
+<section><h2>گزارش‌های تخلف</h2>${S.reports.map((r,i)=>`<div class="c row sp" style="margin:6px 0"><span>${r.t}</span><span>${r.st}${r.st=='باز'?` <button class="btn o s" data-rs="${i}">بررسی شد</button>`:''}</span></div>`).join('')}</section>
+<section><h2>دسته‌بندی‌ها</h2><div class="ov"><table>${CATS.map(c=>`<tr><td>${c[0]}</td><td>${fa(c.length-1)} تخصص</td></tr>`).join('')}</table></div><p class="mu">ویرایش دسته‌بندی‌ها در این نمونه فقط‌خواندنی است.</p></section>`};
+R['/terms']=()=>`<div class="c" style="margin-top:24px;max-width:720px"><h2>قوانین و حریم خصوصی</h2><p>این یک نمونه اولیه است. داده‌ها فقط در مرورگر شما ذخیره می‌شوند و جایی ارسال نمی‌شوند. اطلاعات حساس واقعی وارد نکنید.</p></div>`;
+R['/404']=()=>`<div class="c" style="margin:40px auto;text-align:center;max-width:420px"><h1>۴۰۴</h1><p>صفحه‌ای که دنبالش بودید پیدا نشد.</p><a class="btn" href="#/">بازگشت به خانه</a></div>`;
+// ---- router
+function route(){const h=location.hash.slice(1)||'/';const [path,qs]=h.split('?');const q=new URLSearchParams(qs||'');let f,arg;
+const m=path.match(/^(\/pro\/|\/project\/)(\d+)$/);if(m){f=R[m[1]];arg=m[2]}else{f=R[path];arg=q}
+$('#app').innerHTML=(f||R['/404'])(arg);head();scrollTo(0,0);bind(path,q)}
+function bind(path,q){
+if(path=='/'){$('#qs').onsubmit=e=>{e.preventDefault();location.hash='#/search?t='+encodeURIComponent($('#q').value)}}
+if(path=='/search'){$('#flt').onsubmit=e=>{e.preventDefault();const u=new URLSearchParams();new FormData(e.target).forEach((v,k)=>{if(v)u.set(k,v)});const n='#/search?'+u;if(location.hash==n)route();else location.hash=n};runSearch(q)}
+if(path=='/login')loginBind();if(path=='/new')newBind();
+if(path=='/profile'){$('#pf2').onsubmit=e=>{e.preventDefault();for(const k in S.prof){const el=$('#p_'+k);if(el)S.prof[k]=k=='photo'?(el.checked?1:0):el.value.trim()}if(S.prof.name)S.user.name=S.prof.name;save();toast('پروفایل ذخیره شد');route()};
+$('#vr').onclick=()=>toast('درخواست تأیید ثبت شد (شبیه‌سازی)');document.querySelectorAll('[data-go]').forEach(a=>a.onclick=e=>{e.preventDefault();const el=$('#'+a.dataset.go);el.focus();el.scrollIntoView({block:'center'})})}
+if(path=='/messages'){document.querySelectorAll('[data-ch]').forEach(a=>a.onclick=e=>{e.preventDefault();CH=+a.dataset.ch;S.chats[CH].unread=0;save();route()});
+const mf=$('#mf');if(mf)mf.onsubmit=e=>{e.preventDefault();const t=$('#mt').value.trim();if(!t)return;const c=S.chats[CH];c.m.push(['me',t]);save();route();setTimeout(()=>{c.m.push(['o','پیام شما دریافت شد. (پاسخ خودکار نمایشی)']);save();if(location.hash=='#/messages')route()},900)};
+const bl=$('[data-bl]');if(bl)bl.onclick=()=>{if(confirm('این کاربر مسدود شود؟')){S.chats.splice(CH,1);CH=0;save();route();toast('کاربر مسدود شد')}};
+const rp=$('[data-rp]');if(rp)rp.onclick=()=>{S.reports.unshift({t:'گزارش گفت‌وگو با '+S.chats[CH].w,st:'باز'});save();toast('گزارش ثبت شد')}}
+if(path=='/notifs'){$('#ra').onclick=()=>{S.nt.forEach(n=>n.r=1);save();route()};document.querySelectorAll('[data-rd]').forEach(b=>b.onclick=()=>{S.nt[b.dataset.rd].r=1;save();route()})}
+if(path=='/favs'&&$('#cc'))$('#cc').onclick=()=>{S.cmp=[];save();route()};
+if(path=='/admin')document.querySelectorAll('[data-rs]').forEach(b=>b.onclick=()=>{S.reports[b.dataset.rs].st='بررسی‌شده';save();route()});
+const sp=$('#sp');if(sp)sp.onclick=()=>propForm(sp.dataset.id);
+document.querySelectorAll('[data-ps]').forEach(s=>s.onchange=()=>{const x=S.props.find(p=>p.id==s.dataset.ps),st=s.value;
+if(st=='پذیرفته‌شده'){const j=allPr().find(o=>o[0]==x.pid),n=j?j[4].find(r=>r[1]==x.role):0,acc=S.props.filter(p=>p.pid==x.pid&&p.role==x.role&&p.st=='پذیرفته‌شده'&&p.id!=x.id).length;if(n&&acc>=n[2]){toast('ظرفیت این نقش پر است');return route()}}
+x.st=st;save();toast('وضعیت پیشنهاد تغییر کرد')});
+document.querySelectorAll('[data-pw]').forEach(b=>b.onclick=()=>{const x=S.props.find(p=>p.id==b.dataset.pw);x.st='پس‌گرفته‌شده';save();route()})}
+document.addEventListener('click',e=>{const f=e.target.closest('[data-fav]'),c=e.target.closest('[data-cmp]'),m=e.target.closest('[data-msg]');
+if(f){if(!can())return toast('برای ذخیره، وارد شوید'),location.hash='#/login';const id=+f.dataset.fav,i=S.fav.indexOf(id);if(i<0)S.fav.push(id);else S.fav.splice(i,1);save();route()}
+if(c){if(!can())return toast('برای مقایسه، وارد شوید');const id=+c.dataset.cmp;if(!S.cmp.includes(id)){if(S.cmp.length>=3)return toast('حداکثر ۳ مورد');S.cmp.push(id);save()}toast('به مقایسه اضافه شد')}
+if(m){if(!can())return toast('برای ارسال پیام، وارد شوید'),location.hash='#/login';const p=P.find(x=>x[0]==m.dataset.msg);let i=S.chats.findIndex(x=>x.w==p[1]);if(i<0){S.chats.unshift({w:p[1],pj:'گفت‌وگوی مستقیم',m:[['o','سلام! چطور می‌توانم کمک کنم؟']],unread:0});i=0}CH=i;save();location.hash='#/messages'}});
+function propForm(pid){const pf=$('#pf');if(!can()){toast('برای ارسال پیشنهاد، وارد شوید');return location.hash='#/login'}
+pf.innerHTML=`<form class="c" id="f9" style="max-width:560px"><h2>پیشنهاد همکاری</h2><label for="q1">نقش</label><select id="q1">${allPr().find(j=>j[0]==pid)[4].map(r=>`<option>${r[1]}</option>`).join('')}</select><label for="q2">دستمزد پیشنهادی (تومان)</label><input id="q2" type="number" min="0"><div class="er" id="e1"></div><label for="q3">معرفی کوتاه</label><textarea id="q3"></textarea><div class="er" id="e2"></div><button class="btn" style="margin-top:12px">ارسال</button></form>`;pf.scrollIntoView();
+$('#f9').onsubmit=e=>{e.preventDefault();$('#e1').textContent=$('#e2').textContent='';let ok=1;if(!$('#q2').value){$('#e1').textContent='دستمزد را وارد کنید';ok=0}if($('#q3').value.trim().length<10){$('#e2').textContent='معرفی حداقل ۱۰ نویسه باشد';ok=0}if(!ok)return;
+S.props.unshift({id:Date.now(),pid:+pid,by:S.user.name,role:$('#q1').value,fee:+$('#q2').value,msg:$('#q3').value.trim(),st:'ارسال‌شده',mine:1});S.nt.unshift({t:'پیشنهاد شما ارسال شد',r:0});save();toast('پیشنهاد ارسال شد');route()}}
+function newBind(){const d=NEWP,rd=()=>{const g=i=>$('#'+i);if(g('a1')){d.t=g('a1').value;d.ty=+g('a2').value;d.c=+g('a3').value;d.ds=g('a4').value}if(g('a5')){d.co=g('a5').value;d.f=+g('a6').value;d.du=g('a7').value}document.querySelectorAll('[data-r]').forEach(c=>{const[i,s]=c.dataset.r.split('|');d.r=d.r.filter(r=>r[1]!=s);if(c.checked)d.r.push([+i,s,1])})};
+const er=m=>{$('#e1').textContent=m;return 0};
+const nx=$('#nx');if(nx)nx.onclick=()=>{rd();if(d.s==0&&d.t.trim().length<3)return er('عنوان حداقل ۳ نویسه باشد');if(d.s==1&&!d.r.length)return er('حداقل یک تخصص انتخاب کنید');if(d.s==2&&d.f<0)return er('مبلغ معتبر نیست');d.s++;route()};
+const pv=$('#pv');if(pv)pv.onclick=()=>{rd();d.s--;route()};
+const fin=draft=>{S.pr.unshift([Date.now(),d.t,d.ty,d.c,d.r,d.co,d.f,d.ds||'بدون توضیح',draft?'draft':'pub']);save();NEWP={s:0,t:"",ty:0,c:0,ds:"",r:[],co:"پروژه‌ای",f:0,du:""};toast(draft?'پیش‌نویس ذخیره شد':'پروژه منتشر شد');location.hash=draft?'#/dash':'#/projects'};
+if($('#pb'))$('#pb').onclick=()=>fin(0);if($('#dr'))$('#dr').onclick=()=>fin(1)}
+function loginBind(){const e=m=>$('#e1').textContent=m;
+if($('#l1'))$('#l1').onclick=()=>{const p=$('#ph').value.replace(/[۰-۹]/g,d=>'۰۱۲۳۴۵۶۷۸۹'.indexOf(d));if(!/^09\d{9}$/.test(p))return e('شماره موبایل معتبر نیست (مثلاً 09123456789)');LG={s:1,p};route()};
+if($('#l2'))$('#l2').onclick=()=>{const c=$('#cd').value.replace(/[۰-۹]/g,d=>'۰۱۲۳۴۵۶۷۸۹'.indexOf(d));if(c!='12345')return e('کد اشتباه است. کد آزمایشی ۱۲۳۴۵ است.');if(LG.p=='09000000000'){S.user={name:'مدیر آزمایشی',roles:['admin'],admin:1};save();LG={s:0,p:''};toast('ورود مدیر آزمایشی');return location.hash='#/admin'}LG.s=2;route()};
+if($('#l3'))$('#l3').onclick=()=>{const n=$('#nm').value.trim();if(n.length<2)return e('نام را وارد کنید');const r=[];if($('#r1').checked)r.push('client');if($('#r2').checked)r.push('pro');if(!r.length)return e('حداقل یک نقش انتخاب کنید');S.user={name:n,roles:r};S.prof.name=n;save();LG={s:0,p:''};location.hash='#/dash'}}
+addEventListener('hashchange',route);theme();route();
+</script>
+</body>
+</html>
